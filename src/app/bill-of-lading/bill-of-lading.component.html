@@ -1,0 +1,74 @@
+<h1>BILL OF LADING</h1>
+
+<form [formGroup]="formGroup">
+
+<mat-form-field appearance="fill" class="initial-table">
+  <mat-label>Consignee</mat-label>
+  <input matInput [formControl]="cosigneeControl">
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="initial-table">
+  <mat-label>Shipper</mat-label>
+  <input matInput [formControl]="shipperControl">
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="initial-table">
+  <mat-label>3rd Party Billing Info</mat-label>
+  <input matInput [formControl]="billingInfoControl">
+</mat-form-field>
+
+
+<div></div>
+
+
+<mat-form-field appearance="fill" class="routing">
+  <mat-label>Special Carrier Routing</mat-label>
+  <input matInput [formControl]="specialCarrierRoutingControl">
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="routing">
+  <mat-label>P.O. Number:</mat-label>
+  <input matInput [formControl]="poNumberRoutingControl">
+</mat-form-field>
+
+<div></div>
+
+<mat-form-field appearance="fill" class="large-table">
+  <mat-label>Shipping Units</mat-label>
+  <input matInput [formControl]="shippingUnitsControl">
+</mat-form-field>
+
+<mat-checkbox [formControl]="hazardousMaterialControl">Haz Material?</mat-checkbox>
+
+<mat-form-field appearance="fill" class="large-table">
+  <mat-label>Description</mat-label>
+  <textarea matInput [formControl]="descriptionControl"></textarea>
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="large-table">
+  <mat-label>NMFC Item No.</mat-label>
+  <input matInput [formControl]="nmfcNumberControl">
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="large-table">
+  <mat-label>Weight (in Lbs)</mat-label>
+  <input matInput [formControl]="weightControl">
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="large-table">
+  <mat-label>Class</mat-label>
+  <input matInput [formControl]="classControl">
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="large-table">
+  <mat-label>FedEx Acct #</mat-label>
+  <input matInput [formControl]="fedexAccountNumberControl">
+</mat-form-field>
+
+<mat-form-field appearance="fill" class="large-table">
+  <mat-label>Quote #</mat-label>
+  <input matInput [formControl]="quoteNumberControl">
+</mat-form-field>
+
+
+</form>
