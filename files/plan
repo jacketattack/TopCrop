@@ -1,0 +1,13 @@
+MVP - Goal - allow user to be able to digitally create a bill of lading pdf file
+
+fill in inputs
+click a button
+download a pdf
+
+deploy to heroku
+
+
+Out of scope
+- input validation
+- memory
+- nice looking layout

@@ -1,0 +1,18 @@
+Tim makes the initial excel doc (invoice information sheet)
+
+1. email it to Billing (accounting) and to SHipping
+2. Annette takes the info off of that and puts it into quickbooks
+3. email to Emily (Shipping) 
+  - Goal is to make bill of lading in word (origin + corrected bill of lading)
+  - look up information in history
+  - agrian -- DB of description info for the different chemicals
+  - Em has master sheet of information of emails to send to 
+
+
+Corrected BOL --> Freight Terminal (ex. FedEx Valdosta) (email)
+Letter of Authority --> Freight Terminal (ex. FedEx Valdosta) (same email)
+Origin BOL --> Vendor (he who sells the chemical to top crop) (email)
+
+
+MVP
+- have a angular web app
