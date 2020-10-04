@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Shipping } from '../interfaces/shipping.interface';
 
 @Component({
   selector: 'topcrop-bill-of-lading',
@@ -7,10 +8,8 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
   styleUrls: ['./bill-of-lading.component.less']
 })
 export class BillOfLadingComponent implements OnInit {
-  formGroup: FormGroup = new FormGroup({});
-  cosigneeControl: FormControl;
-  shipperControl: FormControl;
-  billingInfoControl: FormControl;
+  formGroup: FormGroup;
+  shippings: Shipping[] = [];
   specialCarrierRoutingControl: FormControl;
   poNumberRoutingControl: FormControl;
   shippingUnitsControl: FormControl;
@@ -25,10 +24,6 @@ export class BillOfLadingComponent implements OnInit {
   quoteNumberControl: FormControl;
 
   constructor(private fb: FormBuilder) {
-    this.cosigneeControl = fb.control(null);
-    this.shipperControl = fb.control(null);
-    this.billingInfoControl = fb.control(null);
-
     this.specialCarrierRoutingControl = fb.control(null);
     this.poNumberRoutingControl = fb.control(null);
 
@@ -44,6 +39,28 @@ export class BillOfLadingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.formGroup = new FormGroup({
+      specialCarrierRouting: this.specialCarrierRoutingControl,
+      poNumberRouting: this.poNumberRoutingControl,
+      shippingUnits: this.shippingUnitsControl,
+      hazardousMaterial: this.hazardousMaterialControl,
+      description: this.descriptionControl,
+      nmfcNumber: this.nmfcNumberControl,
+      weight: this.weightControl,
+      class: this.classControl,
+      fedexAccountNumber: this.fedexAccountNumberControl,
+      quoteNumber: this.quoteNumberControl
+    });
+
+    this.formGroup.valueChanges.subscribe(
+      () => {
+        console.log(this.formGroup);
+      }
+    );
+  }
+
+  updateShipping(updatedShippings: Shipping[]): void {
+    this.shippings = updatedShippings;
   }
 
 }

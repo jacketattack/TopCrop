@@ -1,0 +1,29 @@
+<form [formGroup]="formGroup">
+  <div formArrayName="shippings">
+    <div *ngFor="let shipping of shippings.controls; index as idx">
+      <form [formGroup]="shipping">
+
+        <mat-form-field appearance="fill" class="initial-table">
+          <mat-label>Consignee</mat-label>
+          <input matInput formControlName="consignee" autocomplete="doNotAutoComplete">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="initial-table">
+          <mat-label>Shipper</mat-label>
+          <input matInput formControlName="shipper" autocomplete="doNotAutoComplete">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="initial-table">
+          <mat-label>3rd Party Billing Info</mat-label>
+          <input matInput formControlName="thirdPartyBillingInfo" autocomplete="doNotAutoComplete">
+        </mat-form-field>
+
+        <button *ngIf="idx !== 0" mat-raised-button color="warn" (click)="removeRow(idx)">Remove</button>
+
+      </form>
+    </div>
+
+    <button mat-raised-button class="add-shipper-button" (click)="addRow()">Add Shipper</button>
+
+  </div>
+</form>

@@ -1,29 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BillOfLadingComponent } from './bill-of-lading/bill-of-lading.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-
-
-
+import { ShippingTableComponent } from './shipping-table/shipping-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BillOfLadingComponent,
+    ShippingTableComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatCheckboxModule,
     MatFormFieldModule,
+    MatButtonModule,
     MatInputModule,
     BrowserAnimationsModule,
     RouterModule,
